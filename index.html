@@ -125,7 +125,7 @@
         <li><span class="secnum"><a href="#sec-web-scripting">4.1</a></span> Web 脚本</li>
         <li><span class="secnum"><a href="#sec-ecmascript-overview">4.2</a></span> ECMAScript Overview
           <ol class="toc">
-            <li><span class="secnum"><a href="#sec-objects">4.2.1</a></span> Objects</li>
+            <li><span class="secnum"><a href="#sec-objects">4.2.1</a></span> 对象</li>
             <li><span class="secnum"><a href="#sec-strict-variant-of-ecmascript">4.2.2</a></span> The Strict Variant of
                 ECMAScript</li>
           </ol>
@@ -1956,16 +1956,9 @@
     </div>
 
     <section id="sec-objects">
-      <h1><span class="secnum" id="sec-4.2.1"><a href="#sec-objects" title="link to this section">4.2.1</a></span> Objects</h1>
+      <h1><span class="secnum" id="sec-4.2.1"><a href="#sec-objects" title="link to this section">4.2.1</a></span> 对象</h1>
 
-      <p>Even though ECMAScript includes syntax for class definitions, ECMAScript objects are not fundamentally class-based such
-      as those in C++, Smalltalk, or Java. Instead objects may be created in various ways including via a literal notation or via
-      <b><i>constructors</i></b> which create objects and then execute code that initializes all or part of them by assigning
-      initial values to their properties.  Each constructor is a function that has a property named <code>"prototype"</code> that
-      is used to implement <b><i>prototype-based inheritance</i></b> and <b><i>shared properties</i></b>. Objects are created by
-      using constructors in <b>new</b> expressions; for example, <code>new Date(2009,11)</code> creates a new Date object.
-      Invoking a constructor without using <b>new</b> has consequences that depend on the constructor. For example,
-      <code>Date()</code> produces a string representation of the current date and time rather than an object.</p>
+      <p>尽管 ECMAScript 包含了 class 定义的语法，但是 ECMAScript 的对象从根本上来说并不是像 C++，Smalltalk 和 Java 这样基于 class 语言的对象。相反，ECMAScript 对象可以通过各种方式创建，通过对象直接创建，或者通过创建对象的<b><i>构造器（constructors）</i></b> 创建，然后再通过执行代码初始化属性的全部或者部分值。每一个 constructor 都是一个拥有 <code>"prototype"</code> 属性的函数，这个属性用来实现 <b><i>基于原型的继承</i></b> 和 <b><i>属性共享</i></b>。constructor 需要使用 <b>new</b> 表达式来创建对象；举个例子，<code>new Date(2009,11)</code> 创建了一个新的 Date 对象。不通过 <b>new</b>，直接执行 constructor 的结果取决于 constructor 本身。举个例子，<code>Date()</code> 会产生一个表示当前时间和日期的字符串，而不是对象。</p>
 
       <p>Every object created by a constructor has an implicit reference (called the object&rsquo;s <i>prototype</i>) to the value
       of its constructor&rsquo;s <code>"prototype"</code> property. Furthermore, a prototype may have a non-null implicit
