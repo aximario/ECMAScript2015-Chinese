@@ -122,7 +122,7 @@
     <li><span class="secnum"><a href="#sec-normative-references">3</a></span> 参考规范</li>
     <li><span class="secnum"><a href="#sec-overview">4</a></span> 概述
       <ol class="toc">
-        <li><span class="secnum"><a href="#sec-web-scripting">4.1</a></span> Web Scripting</li>
+        <li><span class="secnum"><a href="#sec-web-scripting">4.1</a></span> Web 脚本</li>
         <li><span class="secnum"><a href="#sec-ecmascript-overview">4.2</a></span> ECMAScript Overview
           <ol class="toc">
             <li><span class="secnum"><a href="#sec-objects">4.2.1</a></span> Objects</li>
@@ -1836,7 +1836,7 @@
   <p>This Ecma Standard has been adopted by the General Assembly of June 2015.</p>
 </section>
 
-<div class="inner-title">ECMAScript 2015 Language Specification </div>
+<div class="inner-title">ECMAScript 2015 语言规范</div>
 
 <section id="sec-scope">
   <h1><span class="secnum" id="sec-1"><a href="#sec-scope" title="link to this section">1</a></span> 范围</h1>
@@ -1904,23 +1904,13 @@
   </div>
 
   <section id="sec-web-scripting">
-    <h1><span class="secnum" id="sec-4.1"><a href="#sec-web-scripting" title="link to this section">4.1</a></span> Web
-        Scripting</h1>
+    <h1><span class="secnum" id="sec-4.1"><a href="#sec-web-scripting" title="link to this section">4.1</a></span> Web 脚本</h1>
 
-    <p>A web browser provides an ECMAScript host environment for client-side computation including, for instance, objects that
-    represent windows, menus, pop-ups, dialog boxes, text areas, anchors, frames, history, cookies, and input/output. Further, the
-    host environment provides a means to attach scripting code to events such as change of focus, page and image loading,
-    unloading, error and abort, selection, form submission, and mouse actions. Scripting code appears within the HTML and the
-    displayed page is a combination of user interface elements and fixed and computed text and images. The scripting code is
-    reactive to user interaction and there is no need for a main program.</p>
+    <p>一个 web 浏览器为 ECMAScript 提供了客户端的宿主环境，举个例子，包括 windows 对象，menus，pop-ups，dialog boxes，text areas，anchors，frames，history，cookies 以及输入和输出。不仅如此，宿主环境也提供了事件绑定，比如焦点改变，页面和图片的加载，卸载，错误和主动取消。选择，表单提交和鼠标事件。具有内联脚本的 HTML 页面是一种图片，文字等和用户交互的集合。这种脚本会响应用户的行为，因此不需要单独的主程序。</p>
 
-    <p>A web server provides a different host environment for server-side computation including objects representing requests,
-    clients, and files; and mechanisms to lock and share data. By using browser-side and server-side scripting together, it is
-    possible to distribute computation between the client and server while providing a customized user interface for a Web-based
-    application.</p>
+    <p>一个 web 服务器为 ECMAScript 提供了一个不同的服务端宿主环境，包括请求，客户端和文件系统；锁住和分享数据的机制。通过使用浏览器端和服务器端的脚本代码，我们可以给基于 Web 的应用提供这种自定义的接口和功能。</p>
 
-    <p>Each Web browser and server that supports ECMAScript supplies its own host environment, completing the ECMAScript execution
-    environment.</p>
+    <p>每个 Web 浏览器和服务器提供的 ECMAScript 宿主环境使得 ECMAScript 得以运行。</p>
   </section>
 
   <section id="sec-ecmascript-overview">
