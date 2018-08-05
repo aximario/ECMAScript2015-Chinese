@@ -123,7 +123,7 @@
     <li><span class="secnum"><a href="#sec-overview">4</a></span> 概述
       <ol class="toc">
         <li><span class="secnum"><a href="#sec-web-scripting">4.1</a></span> Web 脚本</li>
-        <li><span class="secnum"><a href="#sec-ecmascript-overview">4.2</a></span> ECMAScript Overview
+        <li><span class="secnum"><a href="#sec-ecmascript-overview">4.2</a></span> ECMAScript 概述
           <ol class="toc">
             <li><span class="secnum"><a href="#sec-objects">4.2.1</a></span> 对象</li>
             <li><span class="secnum"><a href="#sec-strict-variant-of-ecmascript">4.2.2</a></span> The Strict Variant of
@@ -1916,14 +1916,11 @@
   <section id="sec-ecmascript-overview">
     <div class="front">
       <h1><span class="secnum" id="sec-4.2"><a href="#sec-ecmascript-overview" title="link to this section">4.2</a></span>
-          ECMAScript Overview</h1>
+          ECMAScript 概述</h1>
 
-      <p>The following is an informal overview of ECMAScript&mdash;not all parts of the language are described. This overview is
-      not part of the standard proper.</p>
+      <p>下面是非正式的 ECMAScript 概述，并非所有的部分都涉及到了。这个概述也并不属于规范的一部分。</p>
 
-      <p>ECMAScript is object-based: basic language and host facilities are provided by objects, and an ECMAScript program is a
-      cluster of communicating objects. In ECMAScript, an <b><i>object</i></b> is a collection of zero or more
-      <b><i>properties</i></b> each with <b><i>attributes</i></b> that determine how each property can be used&mdash;for example,
+      <p>ECMAScript 是基于对象的：基础的语言和宿主方法都由对象提供，一个 ECMAScript 程序是一个和对象通信的实例。在 ECMAScript 里，一个 <b><i>对象</i></b> 是一组拥有零个或者多个<b><i>属性</i></b>的集合，每个属性each with <b><i>attributes</i></b> that determine how each property can be used&mdash;for example,
       when the Writable attribute for a property is set to <b>false</b>, any attempt by executed ECMAScript code to assign a
       different value to the property fails. Properties are containers that hold other objects, <b><i>primitive values</i></b>, or
       <b><i>functions</i></b>. A primitive value is a member of one of the following built-in types: <b>Undefined</b>,
