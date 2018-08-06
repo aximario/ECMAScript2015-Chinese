@@ -1920,7 +1920,7 @@
 
       <p>下面是非正式的 ECMAScript 概述，并非所有的部分都涉及到了。这个概述也并不属于规范的一部分。</p>
 
-      <p>ECMAScript 是基于对象的：基础的语言和宿主方法都由对象提供，一个 ECMAScript 程序是一个和对象通信的实例。在 ECMAScript 里，一个 <b><i>对象</i></b> 是一组拥有零个或者多个<b><i>属性</i></b>的集合，每个属性each with <b><i>attributes</i></b> that determine how each property can be used&mdash;for example,
+      <p>ECMAScript 是基于对象的：基础的语言和宿主方法都由对象提供，一个 ECMAScript 程序是一个和对象通信的实例。在 ECMAScript 里，一个 <b><i>对象</i></b> 是一组拥有零个或者多个<b><i>属性</i></b>的集合，每个属性都有一些<b><i>特性</i></b>决定这些属性如何使用。举个例子，当一个属性的 Writable 特性被设置为 <b>false</b>，任何尝试修改这个属性的值的操作都会失败。属性是保存其他对象，<b><i>基本值</i></b>，<b><i>函数</i></b>的容器。
       when the Writable attribute for a property is set to <b>false</b>, any attempt by executed ECMAScript code to assign a
       different value to the property fails. Properties are containers that hold other objects, <b><i>primitive values</i></b>, or
       <b><i>functions</i></b>. A primitive value is a member of one of the following built-in types: <b>Undefined</b>,
