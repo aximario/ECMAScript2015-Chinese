@@ -1920,36 +1920,15 @@
 
       <p>下面是非正式的 ECMAScript 概述，并非所有的部分都涉及到了。这个概述也并不属于规范的一部分。</p>
 
-      <p>ECMAScript 是基于对象的：基础的语言和宿主方法都由对象提供，一个 ECMAScript 程序是一个和对象通信的实例。在 ECMAScript 里，一个 <b><i>对象</i></b> 是一组拥有零个或者多个<b><i>属性</i></b>的集合，每个属性都有一些<b><i>特性</i></b>决定这些属性如何使用。举个例子，当一个属性的 Writable 特性被设置为 <b>false</b>，任何尝试修改这个属性的值的操作都会失败。属性是保存其他对象，<b><i>基本值</i></b>，<b><i>函数</i></b>的容器。
-      when the Writable attribute for a property is set to <b>false</b>, any attempt by executed ECMAScript code to assign a
-      different value to the property fails. Properties are containers that hold other objects, <b><i>primitive values</i></b>, or
-      <b><i>functions</i></b>. A primitive value is a member of one of the following built-in types: <b>Undefined</b>,
-      <b>Null</b>, <b>Boolean</b>, <b>Number</b>, <b>String,</b> and <b>Symbol;</b> an object is a member of the built-in type
-      <b>Object</b>; and a function is a callable object. A function that is associated with an object via a property is called a
-      <b><i>method</i></b>.</p>
+      <p>ECMAScript 是基于对象的：基础的语言和宿主方法都由对象提供，一个 ECMAScript 程序是一个和对象通信的实例。在 ECMAScript 里，一个 <b><i>对象</i></b> 是一组拥有零个或者多个<b><i>属性</i></b>的集合，每个属性都有一些<b><i>特性</i></b>决定这些属性如何使用。举个例子，当一个属性的 Writable 特性被设置为 <b>false</b>，任何尝试修改这个属性的值的操作都会失败。属性是保存其他对象，<b><i>基本值</i></b>，<b><i>函数</i></b>的容器，基本值是下列内置类型之一：<b>Undefined</b>，<b>Null</b>，<b>Boolean</b>，<b>Number</b>，<b>String</b> 和 <b>Symbol</b>；对象是内置的 <b>Object</b> 类型，函数是可以调用的对象。如果一个对象的属性是函数，我们称之为方法。
 
-      <p>ECMAScript defines a collection of <b><i>built-in objects</i></b> that round out the definition of ECMAScript entities.
-      These built-in objects include the global object; objects that are fundamental to the runtime semantics of the language
-      including <b>Object</b>, <b>Function</b>, <b>Boolean</b>, <b>Symbol</b>, and various <b>Error</b> objects; objects that
-      represent and manipulate numeric values including <b>Math</b>, <b>Number</b>, and <b>Date</b>; the text processing objects
-      <b>String</b> and <b>RegExp</b>; objects that are indexed collections of values including <b>Array</b> and nine different
-      kinds of Typed Arrays whose elements all have a specific numeric data representation; keyed collections including <b>Map</b>
-      and <b>Set</b> objects; objects supporting structured data including the <b>JSON</b> object, <b>ArrayBuffer</b>, and
-      <b>DataView</b>; objects supporting control abstractions including generator functions and <b>Promise</b> objects;
-      and<b>,</b> reflection objects including <b>Proxy</b> and <b>Reflect</b>.</p>
+      <p>ECMAScript 定义了一组<b><i>内置对象</i></b>，他们完善了 ECMAScript 实体的定义。这些内置对象包括全局对象；运行时至关重要的对象，<b>Object</b>，<b>Function</b>，<b>Boolean</b>，<b>Symbol</b>，和各种 <b>Error</b> 对象；用来表示和操作数字值的的对象，<b>Math</b>，<b>Number</b>，和 <b>Date</b>；文字处理对象，<b>String</b> 和 <b>RegExp</b>；用来存值的有序集合，包括 <b>Array</b> 和九种 Typed Array，用来存明确的类型的值；键值对集合 <b>Map</b> 和 <b>Set</b>；支持结构化数据的 <b>JSON</b> 对象，<b>ArrayBuffer</b> 和 <b>DataView</b>；支持抽象控制的对象，包括 generator 函数和 <b>Promise</b> 对象，反射对象，<b>Proxy</b> 和 <b>Reflect</b>。</p>
 
-      <p>ECMAScript also defines a set of built-in <b><i>operators</i></b>. ECMAScript operators include various unary operations,
-      multiplicative operators, additive operators, bitwise shift operators, relational operators, equality operators, binary
-      bitwise operators, binary logical operators, assignment operators, and the comma operator.</p>
+      <p>ECMAScript 也内置了一组 <b><i>操作符</i></b>。ECMAScript运算符包括各种一元运算，乘法运算符，加法运算符，按位移位运算符，关系运算符，等式运算符，二进制位运算符，二元逻辑运算符，赋值运算符和逗号运算符。</p>
 
-      <p>Large ECMAScript programs are supported by <b><i>modules</i></b> which allow a program to be divided into multiple
-      sequences of statements and declarations. Each module explicitly identifies declarations it uses that need to be provided by
-      other modules and which of its declarations are available for use by other modules.</p>
+      <p>大型 ECMAScript 程序可以由模块支持。<b><i>模块</i></b> 可以把程序分割划分成多个部分。每个模块都要明确声明自己使用了哪些其他的模块和自己提供了哪些别的模块可用的功能。</p>
 
-      <p>ECMAScript syntax intentionally resembles Java syntax. ECMAScript syntax is relaxed to enable it to serve as an
-      easy-to-use scripting language. For example, a variable is not required to have its type declared nor are types associated
-      with properties, and defined functions are not required to have their declarations appear textually before calls to
-      them.</p>
+      <p>ECMAScript 的语法和 Java 类似。ECMAScript 的语法很松，让它成为一门易用的语言。例如使用变量前不需要声明，也不需要定义属性的类型，在调用函数之前也不需要先声明它们。</p>
     </div>
 
     <section id="sec-objects">
