@@ -37,9 +37,9 @@
     <rect class="box" x="0.5" y="0.5" width="718" height="353" />
     <!-- legend -->
     <path class="a d" d="M 457,25 616,25" />
-    <text x="470" y="51" font-size="13.5">implicit prototype link</text>
+    <text x="470" y="51" font-size="13.5">隐式原型链接</text>
     <path class="a s" d="M 456,80 616,80" />
-    <text x="469" y="106" font-size="12.5">explicit prototype property</text>
+    <text x="469" y="106" font-size="12.5">显式原型属性</text>
 
     <!-- CF -->
     <rect class="box" x="80.5" y="25.5" width="144" height="117" />

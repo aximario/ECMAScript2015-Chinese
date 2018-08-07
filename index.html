@@ -1936,27 +1936,18 @@
 
       <p>尽管 ECMAScript 包含了 class 定义的语法，但是 ECMAScript 的对象从根本上来说并不是像 C++，Smalltalk 和 Java 这样基于 class 语言的对象。相反，ECMAScript 对象可以通过各种方式创建，通过对象直接创建，或者通过创建对象的<b><i>构造器（constructors）</i></b> 创建，然后再通过执行代码初始化属性的全部或者部分值。每一个 constructor 都是一个拥有 <code>"prototype"</code> 属性的函数，这个属性用来实现 <b><i>基于原型的继承</i></b> 和 <b><i>属性共享</i></b>。constructor 需要使用 <b>new</b> 表达式来创建对象；举个例子，<code>new Date(2009,11)</code> 创建了一个新的 Date 对象。不通过 <b>new</b>，直接执行 constructor 的结果取决于 constructor 本身。举个例子，<code>Date()</code> 会产生一个表示当前时间和日期的字符串，而不是对象。</p>
 
-      <p>Every object created by a constructor has an implicit reference (called the object&rsquo;s <i>prototype</i>) to the value
-      of its constructor&rsquo;s <code>"prototype"</code> property. Furthermore, a prototype may have a non-null implicit
-      reference to its prototype, and so on; this is called the <i>prototype chain</i>. When a reference is made to a property in
-      an object, that reference is to the property of that name in the first object in the prototype chain that contains a
-      property of that name. In other words, first the object mentioned directly is examined for such a property; if that object
-      contains the named property, that is the property to which the reference refers; if that object does not contain the named
-      property, the prototype for that object is examined next; and so on.</p>
+      <p>每一个由构造器创建的对象都有一个隐式引用（叫做对象的原型）指向构造器的 <code>"prototype"</code> 属性。而且，一个原型也可以有一个非 null 的隐式引用指向它的原型，这样就形成了 <i>原型链</i>。当一个引用指向一个对象的属性，那这个引用指向的是原型链上第一个出现同名的属性。换句话说，首先检查直接引用的对象上有没有这个属性，如果有这个属性，那引用就指向这个对象上的这个属性；如果这个对象上没有这个属性，就会检查这个对象的原型上有没有这个属性，以此类推。</p>
 
       <figure>
         <object data="figure-1.svg" height="354" type="image/svg+xml" width="719">
           <img alt="An image of lots of boxes and arrows." height="354" src="figure-1.png" width="719">
         </object>
-        <figcaption>Figure 1 &mdash; Object/Prototype Relationships</figcaption>
+        <figcaption>图 1 &mdash; 对象/原型 的关系</figcaption>
       </figure>
 
-      <p>In a class-based object-oriented language, in general, state is carried by instances, methods are carried by classes, and
-      inheritance is only of structure and behaviour. In ECMAScript, the state and methods are carried by objects, while
-      structure, behaviour, and state are all inherited.</p>
+      <p>在基于类的面向对象语言中，通常来说，实例拥有状态，类拥有方法，继承只继承结构和行为。（//TODO）在 ECMAScript 中，实例拥有状态和方法，结构，行为和状态都是继承过来的。</p>
 
-      <p>All objects that do not directly contain a particular property that their prototype contains share that property and its
-      value. Figure 1 illustrates this:</p>
+      <p>所有的对象都会共享他们没有，但是他们原型上的存在的属性。如图 1 所示:</p>
 
       <p><b>CF</b> is a constructor (and also an object). Five objects have been created by using <code>new</code> expressions:
       <b>cf<sub>1</sub></b>, <b>cf<sub>2</sub></b>, <b>cf<sub>3</sub></b>, <b>cf<sub>4</sub></b>, and <b>cf<sub>5</sub></b>. Each
