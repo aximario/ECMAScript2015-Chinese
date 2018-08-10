@@ -126,8 +126,7 @@
         <li><span class="secnum"><a href="#sec-ecmascript-overview">4.2</a></span> ECMAScript 概述
           <ol class="toc">
             <li><span class="secnum"><a href="#sec-objects">4.2.1</a></span> 对象</li>
-            <li><span class="secnum"><a href="#sec-strict-variant-of-ecmascript">4.2.2</a></span> The Strict Variant of
-                ECMAScript</li>
+            <li><span class="secnum"><a href="#sec-strict-variant-of-ecmascript">4.2.2</a></span> ECMAScript 的严格变体</li>
           </ol>
         </li>
         <li><span class="secnum"><a href="#sec-terms-and-definitions">4.3</a></span> Terms and definitions
@@ -1953,37 +1952,18 @@
 
       <p>和大多数基于类的语言不同的是，对象可以动态的给属性赋值。也就是说，构造器不是必须给构造的对象赋值。如上图，可以通过给 <b>CF<sub>p</sub></b> 赋值让 <b>cf<sub>1</sub></b>，<b>cf<sub>2</sub></b>, <b>cf<sub>3</sub></b>，<b>cf<sub>4</sub></b> 和 <b>cf<sub>5</sub></b> 也有这个属性。</p>
 
-      <p>Although ECMAScript objects are not inherently class-based, it is often convenient to define class-like abstractions
-      based upon a common pattern of constructor functions, prototype objects, and methods. The ECMAScript built-in objects
-      themselves follow such a class-like pattern. Beginning with ECMAScript 2015, the ECMAScript language includes syntactic
-      class definitions that permit programmers to concisely define objects that conform to the same class-like abstraction
-      pattern used by the built-in objects.</p>
+      <p>尽管 ECMAScript 不是基于类的继承，但是也能基于构造函数，原型对象和方法来定义类似类的抽象。ECMAScript 的内置对象就是遵循着这样的类似于类的模式。从 ECMAScript 2015 开始，语言里内置了类的语法定义，允许程序员用内置的对象简明的定义符合类的抽象的对象。</p>
     </section>
 
     <section id="sec-strict-variant-of-ecmascript">
       <h1><span class="secnum" id="sec-4.2.2"><a href="#sec-strict-variant-of-ecmascript"
-          title="link to this section">4.2.2</a></span> The Strict Variant of ECMAScript</h1>
+          title="link to this section">4.2.2</a></span> ECMAScript 的严格变体</h1>
 
-      <p>The ECMAScript Language recognizes the possibility that some users of the language may wish to restrict their usage of
-      some features available in the language. They might do so in the interests of security, to avoid what they consider to be
-      error-prone features, to get enhanced error checking, or for other reasons of their choosing. In support of this
-      possibility, ECMAScript defines a strict variant of the language. The strict variant of the language excludes some specific
-      syntactic and semantic features of the regular ECMAScript language and modifies the detailed semantics of some features. The
-      strict variant also specifies additional error conditions that must be reported by throwing error exceptions in situations
-      that are not specified as errors by the non-strict form of the language.</p>
+      <p>ECMAScript 认识到某些用户可能希望限制使用语言提供的一些特性。他们这样做可能是出于安全的考虑，避免容易出错的功能，增强错误检查，或者出于其他原因选择。为了支持这个，ECMAScript 定义了该语言的严格变体。语言的严格变体排除了某些特定的语义特征，并修改了一些特性的详细语义。严格变体还指定了一些在该模式下的必须抛出的错误。</p>
 
-      <p>The strict variant of ECMAScript is commonly referred to as the <i>strict mode</i> of the language. Strict mode selection
-      and use of the strict mode syntax and semantics of ECMAScript is explicitly made at the level of individual ECMAScript
-      source text units. Because strict mode is selected at the level of a syntactic source text unit, strict mode only imposes
-      restrictions that have local effect within such a source text unit. Strict mode does not restrict or modify any aspect of
-      the ECMAScript semantics that must operate consistently across multiple source text units. A complete ECMAScript program may
-      be composed of both strict mode and non-strict mode ECMAScript source text units. In this case, strict mode only applies
-      when actually executing code that is defined within a strict mode source text unit.</p>
+      <p>ECMAScript 的严格变体通常被称为<i>严格模式</i>。使用严格模式需要明确的在 ECMAScript 文件中声明。因为在源代码单元的级别选择严格模式，所以严格模式仅对该单元有限制效果。严格模式不限制或修改 ECMAScript 语法。 完整的 ECMAScript 程序可以由严格模式和非严格模式的代码组成。 在这种情况下，严格模式仅适用于执行在严格模式下定义的代码。</p>
 
-      <p>In order to conform to this specification, an ECMAScript implementation must implement both the full unrestricted
-      ECMAScript language and the strict variant of the ECMAScript language as defined by this specification. In addition, an
-      implementation must support the combination of unrestricted and strict mode source text units into a single composite
-      program.</p>
+      <p>为了符合这个规范，ECMAScript 实现必须同时实现非严格模式和严格模式。除此之外，必须能实现把非严格模式和严格模式的代码合并为一个程序。</p>
     </section>
   </section>
 
