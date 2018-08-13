@@ -129,7 +129,7 @@
             <li><span class="secnum"><a href="#sec-strict-variant-of-ecmascript">4.2.2</a></span> ECMAScript 的严格变体</li>
           </ol>
         </li>
-        <li><span class="secnum"><a href="#sec-terms-and-definitions">4.3</a></span> Terms and definitions
+        <li><span class="secnum"><a href="#sec-terms-and-definitions">4.3</a></span> 术语和定义
           <ol class="toc">
             <li><span class="secnum"><a href="#sec-type">4.3.1</a></span> type</li>
             <li><span class="secnum"><a href="#sec-primitive-value">4.3.2</a></span> primitive value</li>
@@ -1969,52 +1969,44 @@
 
   <section id="sec-terms-and-definitions">
     <div class="front">
-      <h1><span class="secnum" id="sec-4.3"><a href="#sec-terms-and-definitions" title="link to this section">4.3</a></span> Terms
-          and definitions</h1>
+      <h1><span class="secnum" id="sec-4.3"><a href="#sec-terms-and-definitions" title="link to this section">4.3</a></span> 术语和定义</h1>
 
-      <p>For the purposes of this document, the following terms and definitions apply.</p>
+      <p>本文档将使用下列术语和定义</p>
     </div>
 
     <section id="sec-type">
-      <h1><span class="secnum" id="sec-4.3.1"><a href="#sec-type" title="link to this section">4.3.1</a></span> type</h1>
+      <h1><span class="secnum" id="sec-4.3.1"><a href="#sec-type" title="link to this section">4.3.1</a></span> 类型</h1>
 
-      <p>set of data values as defined in <a href="#sec-ecmascript-data-types-and-values">clause 6</a> of this specification</p>
+      <p>在本规范<a href="#sec-ecmascript-data-types-and-values">第 6 条</a>定义的数据集合</p>
     </section>
 
     <section id="sec-primitive-value">
-      <h1><span class="secnum" id="sec-4.3.2"><a href="#sec-primitive-value" title="link to this section">4.3.2</a></span>
-          primitive value</h1>
+      <h1><span class="secnum" id="sec-4.3.2"><a href="#sec-primitive-value" title="link to this section">4.3.2</a></span> 原始值</h1>
 
-      <p>member of one of the types Undefined, Null, Boolean, Number, Symbol, or String as defined in <a
-      href="#sec-ecmascript-data-types-and-values">clause 6</a></p>
+      <p>在<a href="#sec-ecmascript-data-types-and-values">第 6 条</a>中定义的 Undefined，Null，Boolean，Number，Symbol 或 String 类型之一。</p>
 
       <div class="note">
-        <p><span class="nh">NOTE</span> A primitive value is a datum that is represented directly at the lowest level of the
-        language implementation.</p>
+        <p><span class="nh">注</span>原始值是语言实现的最底层数据。</p>
       </div>
     </section>
 
     <section id="sec-terms-and-definitions-object">
-      <h1><span class="secnum" id="sec-4.3.3"><a href="#sec-terms-and-definitions-object"
-          title="link to this section">4.3.3</a></span> object</h1>
+      <h1><span class="secnum" id="sec-4.3.3"><a href="#sec-terms-and-definitions-object" title="link to this section">4.3.3</a></span> 对象</h1>
 
-      <p>member of the type Object</p>
+      <p>Object 类型的成员</p>
 
       <div class="note">
-        <p><span class="nh">NOTE</span> An object is a collection of properties and has a single prototype object. The prototype
-        may be the null value.</p>
+        <p><span class="nh">注</span>对象是属性的集合，它只有一个原型。原型可以为 null。</p>
       </div>
     </section>
 
     <section id="sec-constructor">
-      <h1><span class="secnum" id="sec-4.3.4"><a href="#sec-constructor" title="link to this section">4.3.4</a></span>
-          constructor</h1>
+      <h1><span class="secnum" id="sec-4.3.4"><a href="#sec-constructor" title="link to this section">4.3.4</a></span> 构造器</h1>
 
-      <p>function object that creates and initializes objects</p>
+      <p>构造器是创建和初始化对象的函数</p>
 
       <div class="note">
-        <p><span class="nh">NOTE</span> The value of a constructor&rsquo;s <code>prototype</code> property is a prototype object
-        that is used to implement inheritance and shared properties.</p>
+        <p><span class="nh">注</span>构造器的 <code>prototype</code> 是一个用来实现继承和共享属性的原型。</p>
       </div>
     </section>
 
