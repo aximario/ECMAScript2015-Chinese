@@ -7214,23 +7214,11 @@
 
       <p><i>词法环境</i>是一种规范类型。它基于 ECMAScript 的词法结构来定义<span class="nt">标志符</span>和具体变量或者函数的关系。词法环境由<a href="#sec-environment-records">环境记录</a>和<i>外部的空引用组成</i>。通常，词法环境和 ECMAScript 代码的一些特定的语法结构相关联，例如<span class="nt">函数声明</span>，<span class="nt">代码块声明</span>，或者<span class="nt">try声明</span>的<span class="nt">Catch</span>子句。这样的代码都会创建新的词法环境。</p>
 
-      <p>An <a href="#sec-environment-records">Environment Record</a> records the identifier bindings that are created within the
-      scope of its associated Lexical Environment. It is referred to as the Lexical Environment&rsquo;s EnvironmentRecord</p>
+      <p><a href="#sec-environment-records">环境记录</a>记录了与之相关的词法环境里创建的标识符绑定。它被称为词法环境的环境记录。</p>
 
-      <p>The outer environment reference is used to model the logical nesting of Lexical Environment values. The outer reference
-      of a (inner) Lexical Environment is a reference to the Lexical Environment that logically surrounds the inner Lexical
-      Environment. An outer Lexical Environment may, of course, have its own outer Lexical Environment. A Lexical Environment may
-      serve as the outer environment for multiple inner Lexical Environments. For example, if a <span
-      class="nt">FunctionDeclaration</span> contains two nested <span class="nt">FunctionDeclarations</span> then the Lexical
-      Environments of each of the nested functions will have as their outer Lexical Environment the Lexical Environment of the
-      current evaluation of the surrounding function.</p>
+      <p>外部环境引用用于对词法环境的逻辑嵌套进行建模。外部词法环境就是在逻辑上包含内部词法环境的环境。外部词法环境当然也可以有自己的词法环境。一个词法环境可以同时是多个内部词法环境的外部环境。例如，一个<span class="nt">函数声明</span>里包含了两个内部<span class="nt">函数声明</span>，那么这两个内部的函数的外部词法环境就是这个外部函数声明的词法环境。</p>
 
-      <p>A <i>global environment</i> is a Lexical Environment which does not have an outer environment. The global
-      environment&rsquo;s outer environment reference is <b>null</b>. A global environment&rsquo;s EnvironmentRecord may be
-      prepopulated with identifier bindings and includes an associated <i>global object</i> whose properties provide some of <a
-      href="#sec-global-environment-records">the global environment</a>&rsquo;s identifier bindings. This global object is the
-      value of a global environment&rsquo;s <code>this</code> binding. As ECMAScript code is executed, additional properties may
-      be added to the global object and the initial properties may be modified.</p>
+      <p><i>全局环境</i>是没有外部词法环境的词法环境。全局环境的外部词法环境为 <b>null</b>。全局环境的环境记录可以是一些预设的包含相关的<i>全局对象</i>的标识符绑定。这个全局对象提供了<a href="#sec-global-environment-records">全局环境</a>的标识符绑定。这个全局对象是全局环境的 <code>this</code> 绑定。当执行 ECMAScript 代码时，可以向全局对象添加其他属性，并且可以修改初始属性。</p>
 
       <p>A <i>module environment</i> is a Lexical Environment that contains the bindings for the top level declarations of a <span
       class="nt">Module</span>. It also contains the bindings that are explicitly imported by the <span class="nt">Module</span>.
