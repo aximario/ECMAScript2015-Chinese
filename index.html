@@ -1840,22 +1840,16 @@
 <section id="sec-scope">
   <h1><span class="secnum" id="sec-1"><a href="#sec-scope" title="link to this section">1</a></span> 范围</h1>
 
-  <p>这个标准定义了 ECMAScript 2015 编程语言的一般用法。</p>
+  <p>本标准定义了 ECMAScript 2015 编程语言的一般性用法。</p>
 </section>
 
 <section id="sec-conformance">
   <h1><span class="secnum" id="sec-2"><a href="#sec-conformance" title="link to this section">2</a></span> 一致性</h1>
-
   <p>符合 ECMAScript 的实现，必须提供和支持该标准规范所描述的所有类型，值，对象，属性，函数，以及程序语法和语义。</p>
-
   <p>符合 ECMAScript 的实现，必须能够解释符合 Unicode 标准的源输入，5.1.0 或更高版本，以及 ISO/IEC 10646。如果没有额外声明采用的是 ISO/IEC 10646-1 子集，那么就当做 Unicode set, 集合 10646 处理。</p>
-
   <p>符合 ECMAScript 的实现，需要实现最新的兼容本规范的 ECMA-402 规范里所声明的用以支持不同国家和文化的编程接口。</p>
-
   <p>符合 ECMAScript 的实现可以提供该规范以外的类型，值，对象，属性和方法。特别是该规范描述的对象，可以提供额外的属性和值。</p>
-
   <p>符合 ECMAScript 的实现可以提供规范以外的正则表达式和语法。特别是用到了在 <a href="#sec-future-reserved-words">subclause 11.6.2.2</a> 中声明的&ldquo;保留字&rdquo;的语法。</p>
-
   <p>符合 ECMAScript 的实现禁止实现在 <a href="#sec-forbidden-extensions">subclause 16.1</a> 中列出的扩展。</p>
 </section>
 
@@ -7212,7 +7206,7 @@
     <div class="front">
       <h1><span class="secnum" id="sec-8.1"><a href="#sec-lexical-environments" title="link to this section">8.1</a></span>词法环境</h1>
 
-      <p><i>词法环境</i>是一种规范类型。它基于 ECMAScript 的词法结构来定义<span class="nt">标志符</span>和具体变量或者函数的关系。词法环境由<a href="#sec-environment-records">环境记录</a>和<i>外部的空引用组成</i>。通常，词法环境和 ECMAScript 代码的一些特定的语法结构相关联，例如<span class="nt">函数声明</span>，<span class="nt">代码块声明</span>，或者<span class="nt">try声明</span>的<span class="nt">Catch</span>子句。这样的代码都会创建新的词法环境。</p>
+      <p><i>词法环境</i>是一种规范类型。它基于 ECMAScript 的词法结构来定义<span class="nt">标志符</span>和具体变量或者函数的关系。词法环境由<a href="#sec-environment-records">环境记录</a>和可能为空的<i>外部词法环境引用</i>构成。通常，词法环境和 ECMAScript 代码的一些特定的语法结构相关联，例如<span class="nt">函数声明</span>，<span class="nt">代码块声明</span>，或者<span class="nt">try声明</span>的<span class="nt">Catch</span>子句。这样的代码都会创建新的词法环境。</p>
 
       <p><a href="#sec-environment-records">环境记录</a>记录了与之相关的词法环境里创建的标识符绑定。它被称为词法环境的环境记录。</p>
 
@@ -7220,30 +7214,20 @@
 
       <p><i>全局环境</i>是没有外部词法环境的词法环境。全局环境的外部词法环境为 <b>null</b>。全局环境的环境记录可以是一些预设的包含相关的<i>全局对象</i>的标识符绑定。这个全局对象提供了<a href="#sec-global-environment-records">全局环境</a>的标识符绑定。这个全局对象是全局环境的 <code>this</code> 绑定。当执行 ECMAScript 代码时，可以向全局对象添加其他属性，并且可以修改初始属性。</p>
 
-      <p>A <i>module environment</i> is a Lexical Environment that contains the bindings for the top level declarations of a <span
-      class="nt">Module</span>. It also contains the bindings that are explicitly imported by the <span class="nt">Module</span>.
-      The outer environment of a module environment is a global environment.</p>
+      <p><i>模块环境</i>是包含了一个<span class="nt">模块</span>顶层声明绑定的词法环境。它也包含了由<span class="nt">模块</span>显示导入的绑定。模块环境的外部环境是全局环境。</p>
 
-      <p>A <i>function environment</i> is a Lexical Environment that corresponds to the invocation of an <a
-      href="#sec-ecmascript-function-objects">ECMAScript function object</a>. A function environment may establish a new
-      <code>this</code> binding. A function environment also captures the state necessary to support <code>super</code> method
+      <p><i>函数环境</i>是对应于 <a href="#sec-ecmascript-function-objects">ECMAScript 函数对象</a>调用的词法环境。一个函数环境可能会建立以个新的 <code>this</code> 绑定。A function environment also captures the state necessary to support <code>super</code> method
       invocations.</p>
 
-      <p>Lexical Environments and <a href="#sec-environment-records">Environment Record</a> values are purely specification
-      mechanisms and need not correspond to any specific artefact of an ECMAScript implementation. It is impossible for an
-      ECMAScript program to directly access or manipulate such values.</p>
+      <p>词法环境和<a href="#sec-environment-records">环境记录</a>是单纯的规范机制，不对应 ECMAScript 的任何人工实现。ECMAScript 也不可能访问和操作这些值。</p>
     </div>
 
     <section id="sec-environment-records">
       <div class="front">
-        <h1><span class="secnum" id="sec-8.1.1"><a href="#sec-environment-records" title="link to this section">8.1.1</a></span>
-            Environment Records</h1>
+        <h1><span class="secnum" id="sec-8.1.1"><a href="#sec-environment-records" title="link to this section">8.1.1</a></span>环境记录</h1>
 
-        <p>There are two primary kinds of Environment Record values used in this specification: <i>declarative Environment
-        Records</i> and <i>object Environment Records</i>. Declarative Environment Records are used to define the effect of
-        ECMAScript language syntactic elements such as <span class="nt">FunctionDeclarations</span>, <span
-        class="nt">VariableDeclarations</span>, and <span class="nt">Catch</span> clauses that directly associate identifier
-        bindings with <a href="#sec-ecmascript-language-types">ECMAScript language values</a>. Object Environment Records are used
+        <p>本规范中使用了两种主要的环境记录：<i>声明性环境记录</i> and <i>对象环境记录</i>。声明性环境记录用来定义直接将标识符和 <a href="#sec-ecmascript-language-types">ECMAScript 语言值</a>绑定起来的语法元素的执行结果，例如<span class="nt">函数声明</span>，<span
+        class="nt">变量声明</span>和<span class="nt">Catch</span>子句。对象环境记录Object Environment Records are used
         to define the effect of ECMAScript elements such as <span class="nt">WithStatement</span> that associate identifier
         bindings with the properties of some object. <a href="#sec-global-environment-records">Global Environment Records</a> and
         function Environment Records are specializations that are used for specifically for <span class="nt">Script</span> global
